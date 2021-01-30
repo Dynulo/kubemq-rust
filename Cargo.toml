@@ -1,0 +1,14 @@
+[package]
+name = "kubemq-rust"
+version = "0.1.0"
+authors = ["Brett Mayson <brett@mayson.io>"]
+edition = "2018"
+
+[dependencies]
+lazy_static = "1.4"
+prost = "0.7"
+tokio = { version = "1.0", features = ["rt-multi-thread", "time", "fs", "macros", "net"] }
+tonic = "0.4"
+
+[build-dependencies]
+tonic-build = "0.4"
