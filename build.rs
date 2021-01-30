@@ -1,3 +1,6 @@
 fn main() {
-    tonic_build::compile_protos("proto/kubemq/kubemq.proto").unwrap();
+    tonic_build::configure()
+        .build_server(false)
+        .compile(&["proto/kubemq/kubemq.proto"], &["proto/kubemq/"])
+        .unwrap();
 }
