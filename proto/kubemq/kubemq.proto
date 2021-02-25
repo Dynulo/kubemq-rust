@@ -12,7 +12,7 @@ service kubemq {
     rpc ReceiveQueueMessages(ReceiveQueueMessagesRequest) returns (ReceiveQueueMessagesResponse) {}
     rpc StreamQueueMessage(stream StreamQueueMessagesRequest) returns (stream StreamQueueMessagesResponse) {}
     rpc AckAllQueueMessages(AckAllQueueMessagesRequest) returns (AckAllQueueMessagesResponse) {}
-    rpc Ping (Empty) returns (PingResult) {}
+    rpc Ping4 (Empty) returns (PingResult) {}
 }
 message PingResult {
     string  Host        =1;
@@ -92,7 +92,7 @@ message Request {
     int32   CacheTTL            =10;
     bytes   Span                =11;
     map<string,string>  Tags             =12;
- }
+}
 message Response {
     string  ClientID        =1;
     string  RequestID       =2;
