@@ -1,4 +1,4 @@
-mod kubemq_proto {
+pub mod kubemq_proto {
     tonic::include_proto!("kubemq");
 }
 
