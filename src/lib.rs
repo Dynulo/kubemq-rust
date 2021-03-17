@@ -3,6 +3,7 @@ mod kubemq_proto {
 }
 
 pub use kubemq_proto::kubemq_client::*;
+pub use kubemq_proto::*;
 
 lazy_static::lazy_static! {
     static ref KUBEMQ_HOST: String = std::env::var("KUBEMQ_HOST").unwrap_or_else(|_| String::from("kubemq-cluster-grpc.kubemq.svc.cluster.local"));
